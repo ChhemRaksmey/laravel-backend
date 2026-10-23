@@ -5,6 +5,8 @@ namespace App\Http\Controllers\fas;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use App\Models\MdlFasModel;
+
 class conFasModel extends Controller
 {
 
@@ -16,9 +18,18 @@ class conFasModel extends Controller
 
 
     public function pgae_list (Request $request) {
+
+        $rows = MdlFasModel::query()
+            ->orderBy('datetime', 'asc')
+            ->paginate(10)
+            ->withQueryString()
+        ;
+
         $page_title = $this->page_title;
         $page_route = $this->path_route;
-        return view($this->path_view . 'list', compact(['page_title', 'page_route']));
+        return view($this->path_view . 'list', compact([
+            'page_title', 'page_route', 'rows',
+        ]));
     }
 
     public function pgae_create (Request $request) {
