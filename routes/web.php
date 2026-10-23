@@ -17,6 +17,10 @@ use App\Http\Controllers\fas\conFasReverse;
 use App\Http\Controllers\fas\conFasToInventory;
 
 
+use App\Http\Controllers\UserController;
+
+Route::resource('users', UserController::class);
+
 
 Route::get('/', function () { return view('welcome'); });
 
