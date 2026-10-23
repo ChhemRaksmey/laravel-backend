@@ -12,7 +12,14 @@ class conFasGDTAccount extends Controller
     public $path_view  = "pages.fas_gdt_account.";
     public $page_title = "Fixed Asset GDT Accounts";
 
-    public function __construct() {}
+    public function __construct() {
+        // $service = app(\App\Services\UserService::class);
+        // $user = $service->create([
+        //     'name' => 'Jane',
+        //     'email' => 'jane@example.com',
+        //     'password' => 'secret123',
+        // ]);
+    }
 
 
     public function pgae_list (Request $request) {

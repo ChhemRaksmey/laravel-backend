@@ -11,7 +11,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // Auto-resolve works without this, but binding makes intent explicit
+        $this->app->bind(UserService::class, UserService::class);
     }
 
     /**
