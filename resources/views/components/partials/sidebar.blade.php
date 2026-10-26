@@ -3,73 +3,55 @@
         <div id="sidebar-menu">
             <ul @class(['metismenu', 'list-unstyled' ]) id="side-menu">
                 
-                <li @class(['menu-title']) key="t-menu">Menu</li>   
+                <li @class(['menu-title']) key="t-menu">Menu</li>
+
 
                 <li>
-                    <a @class(['pt-2', 'pb-2', 'has-arrow', 'waves-effect' ]) href="javascript: void(0);">
+                    <a @class(['pt-1', 'pb-2', 'has-arrow', 'waves-effect' ]) href="javascript: void(0);">
                         <i @class(['mdi', 'mdi-application-cog' ])></i>
-                        <span key="t-dashboards">Fixed Asset Setup</span>
+                        <span key="t-sys">Core Setup</span>
                     </a>
                     <ul aria-expanded="false" @class(['sub-menu'])>
-                        <li><a @class(['py-2']) href="/fas/accounts/list"  key="t-fas-accounts">Accounts</a></li>
-                        <li><a @class(['py-2']) href="/fas/models/list"    key="t-fas-models">Models</a></li>
-                        <li><a @class(['py-2']) href="/fas/suppliers/list" key="t-fas-supplier">Suppliers</a></li>
+                        <li><a @class(['py-2']) href="javascript: void(0);" key="t-sys-UserReports">User Reports</a></li>
+                        <li><a @class(['py-2']) href="javascript: void(0);" key="t-sys-UserTrivileges">User Privileges</a></li>
+                        <li><a @class(['py-2']) href="javascript: void(0);" key="t-sys-User">User Setup</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a @class(['pt-2', 'pb-2', 'has-arrow', 'waves-effect' ]) href="javascript: void(0);">
-                        <i @class(['mdi', 'mdi-folder-cog-outline' ])></i>
-                        <span key="t-fas-gdt">GDT</span>
+                    <a @class(['pt-1', 'pb-2', 'has-arrow', 'waves-effect' ]) href="javascript: void(0);">
+                        <i @class(['mdi', 'mdi-application-cog' ])></i>
+                        <span key="t-aml-setup">System Setup</span>
                     </a>
                     <ul aria-expanded="false" @class(['sub-menu'])>
-                        <li><a @class(['py-2']) href="/fas/gdt/account/list"  key="t-fas-gdt-accounts">Account</a></li>
-                        <li><a @class(['py-2']) href="/fas/gdt/exchange/list" key="t-fas-gdt-exchange">Yearly Exchange</a></li>
-                        <li><a @class(['py-2']) href="/fas/gdt/asset/list"    key="t-fas-gdt-asset">Asset</a></li>
+                        <li><a @class(['py-2']) href="/aml/risk-countries"     key="t-aml-setup-riskcountries">Risk Countries</a></li>
+                        <li><a @class(['py-2']) href="/aml/risk-level"         key="t-aml-setup-tisklevel">Risk Level</a></li>
+                        <li><a @class(['py-2']) href="/aml/risk-customer-role" key="t-aml-setup-customerroles">Customer Roles</a></li>
+                        <li><a @class(['py-2']) href="/aml/resources"          key="t-aml-setup-resources">Sanction Resource</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a @class(['pt-1', 'pb-2', 'has-arrow', 'waves-effect' ]) href="javascript: void(0);">
+                        <i @class(['mdi', 'mdi-application-cog' ])></i>
+                        <span key="t-aml-sanction">Sanction Maintenance</span>
+                    </a>
+                    <ul aria-expanded="false" @class(['sub-menu'])>
+                        <li><a @class(['py-2']) href="/aml/sanction-onboard" key="t-aml-sanction-onboardscanning">Onboard Scanning</a></li>
+                        <li><a @class(['py-2']) href="/aml/sanction-blacklist" key="t-aml-sanction-blacklist">Blacklist</a></li>
+                        <li><a @class(['py-2']) href="/aml/sanction-watchlist" key="t-aml-sanction-watchlist">Watchlist</a></li>
+                        <li><a @class(['py-2']) href="/aml/sanction-whitelist" key="t-aml-sanction-whitelist">Whitelist</a></li>
                     </ul>
                 </li>
 
                 <li>
-                    <a @class(['pt-2', 'pb-2', 'waves-effect']) href="/fas/recived/list">
-                        <i @class(['mdi', 'mdi-application-import' ])></i>
-                        <span key="t-fas-recived">Recived Assets</span>
+                    <a @class(['pt-1', 'pb-2', 'waves-effect']) href="javascript: void(0);">
+                        <i @class(['bx', 'bxs-report' ])></i>
+                        <span key="t-aml-customeralert">Customer Alert</span>
                     </a>
                 </li>
-                <li>
-                    <a @class(['pt-2', 'pb-2', 'waves-effect']) href="/fas/booking/list">
-                        <i @class(['mdi', 'mdi-file-plus-outline' ])></i>
-                        <span key="t-fas-booking">Booking</span>
-                    </a>
-                </li>
-                <li>
-                    <a @class(['pt-2', 'pb-2', 'waves-effect']) href="/fas/transfer/list">
-                        <i @class(['mdi', 'mdi-bank-transfer' ])></i>
-                        <span key="t-fas-transfer">Transfer</span>
-                    </a>
-                </li>
-                <li>
-                    <a @class(['pt-2', 'pb-2', 'waves-effect']) href="/fas/disposal/list">
-                        <i @class(['fas', 'fa-trash-restore-alt' ])></i>
-                        <span key="t-fas-disposal">Disposal</span>
-                    </a>
-                </li>
-                <li>
-                    <a @class(['pt-2', 'pb-2', 'waves-effect']) href="/fas/reverse/list">
-                        <i @class(['dripicons-time-reverse' ])></i>
-                        <span key="t-fas-reverse">Reverse</span>
-                    </a>
-                </li>
-                <li>
-                    <a @class(['pt-2', 'pb-2', 'waves-effect']) href="/fas/to-innventory/list">
-                        <i @class(['mdi', 'mdi-application-export' ])></i>
-                        <span key="t-fas-toinventory">Assets To Inventory</span>
-                    </a>
-                </li>
-
-                
                 
                 <li>
-                    <a @class(['pt-2', 'pb-2', 'waves-effect']) href="javascript: void(0);">
+                    <a @class(['pt-1', 'pb-2', 'waves-effect']) href="javascript: void(0);">
                         <i @class(['bx', 'bxs-report' ])></i>
                         <span key="t-reporting">Reporting</span>
                     </a>

@@ -5,7 +5,7 @@
         @stack('styles')
     </head>
 
-    <body @class(['vertical-enable']) data-keep-enlarged="true" data-sidebar="dark" data-bs-theme="light">
+    <body @class(['vertical-enable']) data-keep-enlarged="true" data-sidebar="dark" data-bs-theme="dark">
         
         <div id="layout-wrapper">
 
