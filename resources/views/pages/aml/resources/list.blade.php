@@ -35,23 +35,21 @@
                                 <tr>
                                     <td class="py-1">{{ $item->full_name }}</td>
                                     <td class="py-1">{{ $item->end_point }}</td>
-                                    <td class="py-1 text-center">{{ $item->status }}</td>
                                     <td class="py-1 text-center">
-                                        <div class="btn-group">
-                                            <a aria-expanded="false" class="text-primary" data-bs-toggle="dropdown" type="button">
-                                                <i class="mdi mdi-cogs"></i>
-                                            </a>
-                                            <div class="dropdown-menu" style="">
-                                                <a class="dropdown-item" href="{{ route($path_route, [ 'client-action' => 'pgae_view', 'recid' => $item->recid ]) }}">View</a>
-                                                <a class="dropdown-item" href="{{ route($path_route, [ 'client-action' => 'pgae_edit', 'recid' => $item->recid ]) }}">Edit</a>
-                                            </div>
-                                        </div>
+                                        @if($item->status === "Y") <span class="badge bg-primary">Active</span>
+                                        @else <span class="badge bg-danger">Disabled</span>
+                                        @endif
+                                    </td>
+                                    <td class="py-1 text-center">
+                                        <a href="{{ route($path_route, [ 'client-action' => 'pgae_view', 'recid' => $item->recid ]) }}">
+                                            <i class="far fa-eye"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             @empty
                                 <tr>
                                     <td colspan="3" class="text-center py-4">
-                                        <h4 class="text-muted">There Are No Records to Display!</h4>
+                                        <h4 class="text-muted">there no record to display !</h4>
                                     </td>
                                 </tr>
                             @endforelse

@@ -5,7 +5,6 @@
                 
                 <li @class(['menu-title']) key="t-menu">Menu</li>
 
-
                 <li>
                     <a @class(['pt-1', 'pb-2', 'has-arrow', 'waves-effect' ]) href="javascript: void(0);">
                         <i @class(['mdi', 'mdi-application-cog' ])></i>
@@ -36,10 +35,10 @@
                         <span key="t-aml-sanction">Sanction Maintenance</span>
                     </a>
                     <ul aria-expanded="false" @class(['sub-menu'])>
-                        <li><a @class(['py-2']) href="/aml/sanction-onboard" key="t-aml-sanction-onboardscanning">Onboard Scanning</a></li>
-                        <li><a @class(['py-2']) href="/aml/sanction-blacklist" key="t-aml-sanction-blacklist">Blacklist</a></li>
-                        <li><a @class(['py-2']) href="/aml/sanction-watchlist" key="t-aml-sanction-watchlist">Watchlist</a></li>
-                        <li><a @class(['py-2']) href="/aml/sanction-whitelist" key="t-aml-sanction-whitelist">Whitelist</a></li>
+                        <li><a @class(['py-2']) href="/aml/sanction/onboard"   key="t-aml-sanction-onboard">Onboard Scanning</a></li>
+                        <li><a @class(['py-2']) href="/aml/sanction/blacklist" key="t-aml-sanction-blacklist">Blacklist</a></li>
+                        <li><a @class(['py-2']) href="/aml/sanction/watchlist" key="t-aml-sanction-watchlist">Watchlist</a></li>
+                        <li><a @class(['py-2']) href="/aml/sanction/whitelist" key="t-aml-sanction-whitelist">Whitelist</a></li>
                     </ul>
                 </li>
 

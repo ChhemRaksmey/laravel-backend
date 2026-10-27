@@ -81,7 +81,7 @@
                                 @empty
                                     <tr>
                                         <td colspan="2" class="text-center py-4">
-                                            <h4 class="text-muted">There Are No Records to Display!</h4>
+                                            <h4 class="text-muted">there no record to display !</h4>
                                         </td>
                                     </tr>
                                 @endforelse
@@ -91,19 +91,7 @@
                     </div>
 
                     <div @class(['tab-pane']) role="tabpanel" id="tab-frmCreate-audit">
-                        <div class="row">
-                            <div class="mb-1 col-md-3">Current Number: </div>
-                            <div class="mb-1 col-md-9">Record Status:</div>
-                            <div class="mb-1 col-md-12">Override 1:</div>
-                            <div class="mb-1 col-md-12">Override 2:</div>
-                            <div class="mb-1 col-md-12">Override 3:</div>
-                            <div class="mb-1 col-md-3">Date Time: {{ date('Y M d H:i') }}</div>
-                            <div class="mb-1 col-md-9">Inputter: (U9999) System Migrator User</div>
-                            <div class="mb-1 col-md-3">Date Time: {{ date('Y M d H:i') }}</div>
-                            <div class="mb-1 col-md-9">Authoriser 1: (U9999) System Migrator User</div>
-                            <div class="mb-1 col-md-3">Date Time: {{ date('Y M d H:i') }}</div>
-                            <div class="mb-1 col-md-9">Authoriser 2: (U9999) System Migrator User</div>
-                        </div>
+                        <x-aduit />
                     </div>
                 
                 </div>

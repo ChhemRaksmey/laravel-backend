@@ -41,7 +41,6 @@ class conAmlResources extends Controller
     public function pgae_view (Request $request) {
         $this->var["recid"]       = $request->recid ?? "";
         $this->var["data_master"] = vwAmlResources::where('recid', $this->var["recid"])->first();
-        
         return view($this->var["path_view"] . 'view', $this->var);
     }
 

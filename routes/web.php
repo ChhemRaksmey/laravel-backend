@@ -7,7 +7,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\aml\conAmlRiskLevel;
 use App\Http\Controllers\aml\conAmlRiskCountries;
 use App\Http\Controllers\aml\conAmlResources;
-
+use App\Http\Controllers\aml\conAmlSanctionOnboard;
+use App\Http\Controllers\aml\conAmlSanctionWatchList;
 
 
 Route::resource('users', UserController::class);
@@ -44,6 +45,31 @@ Route::prefix('aml')
             ->group(function () {
                 Route::get('/',  'submit');
                 Route::post('/', 'submit');
+            })
+        ;
+
+        Route::prefix('sanction')
+            ->name('_sanction')
+            ->group(function () {
+
+                Route::prefix('onboard')
+                    ->name('_onboard')
+                    ->controller(conAmlSanctionOnboard::class)
+                    ->group(function () {
+                        Route::get('/',  'submit');
+                        Route::post('/', 'submit');
+                    })
+                ;
+
+                Route::prefix('watchlist')
+                    ->name('_watchlist')
+                    ->controller(conAmlSanctionWatchList::class)
+                    ->group(function () {
+                        Route::get('/',  'submit');
+                        Route::post('/', 'submit');
+                    })
+                ;
+
             })
         ;
 

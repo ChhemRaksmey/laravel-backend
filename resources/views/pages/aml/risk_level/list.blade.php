@@ -47,7 +47,7 @@
                             @empty
                                 <tr>
                                     <td colspan="3" class="text-center py-4">
-                                        <h4 class="text-muted">There Are No Records to Display!</h4>
+                                        <h4 class="text-muted">there no record to display !</h4>
                                     </td>
                                 </tr>
                             @endforelse
